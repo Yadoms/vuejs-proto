@@ -26,6 +26,7 @@ En terme de répertoire de sortie, il faut les mettre dans un sous répertoire d
 
 Les assets des widgets (ressources graphiques, comme les images) sont référencés par le CSS, et lors de la compilation Vuejs l'identifie et l'ajoute au répertoire de sortie
 
+````
 Source
   |
   |- widget.vue
@@ -39,6 +40,7 @@ Destination
                       |- widget1.umd.min.js.map
                             |- img
                                  |- logo.xxxxxx.png
+````
 
 
 ## Project setup
