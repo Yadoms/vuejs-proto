@@ -1,0 +1,54 @@
+{
+  "name": "movievue",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://abhay07.github.io/movieAppAngular",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "widgetgeneric": "vue-cli-service build --target lib --formats umd-min --no-clean --dest public/widgets/widget1 --name \"MyComponent.[chunkhash]\" widget/widget.vue",
+    "widget1": "vue-cli-service build --target lib --formats umd-min --no-clean --dest public/widgets/widget1 --name \"widget1\" widget/widget.vue",
+    "widget2": "vue-cli-service build --target lib --formats umd-min --no-clean --dest public/widgets/widget2 --name \"widget2\" widget/widget2.vue",
+    "widget3": "vue-cli-service build --target lib --formats umd-min --no-clean --dest public/widgets/widget3 --name \"widget3\" widget/widget3.vue",
+    "allwidgets": "npm run widget1 && npm run widget2 && npm run widget3"
+  },
+  "dependencies": {
+    "vue": "^2.5.17"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.2.0",
+    "@vue/cli-plugin-eslint": "^3.2.0",
+    "@vue/cli-service": "^3.12.1",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0-0",
+    "vue-template-compiler": "^2.5.17"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
