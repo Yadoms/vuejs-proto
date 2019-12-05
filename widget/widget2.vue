@@ -1,17 +1,12 @@
 <template>
   <div class="myClass">
-    <button v-on:click="count++">Vous m\'avez cliqué {{ count }} fois. (W2)</button>
+    Température 42°C
   </div>
 </template>
 
 <script>
 module.exports = {
   name: 'widgetCounter',
-  data: function () {
-    return {
-      count: 0
-    }
-  }
 }
 </script>
 
@@ -20,5 +15,6 @@ module.exports = {
   background-color: green;
   width: 200px;
   height: 40px;
+  margin: 10px;
 }
 </style>
