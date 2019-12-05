@@ -8,6 +8,7 @@ L'objectif de ce proto de de valider que toutes les fonctionnalités nécessaire
 - [X] générer des widgets de façon autonome
 - [X] chargement de widget asynchrones
 - [ ] mutualiser un composant de base ()
+- [ ] typescript
 - [ ] fournir une interface widgetApi aux widgets
 - [ ] vérifier le dual communication (core -> widget : mise à jour d'une valeur, widget -> core : action à effectuer)
 

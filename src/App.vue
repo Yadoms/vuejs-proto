@@ -34,6 +34,10 @@ export default {
     greet: function () {
       this.awesome = true;
 
+      var api : {
+        value: 42;
+      };
+
       Vue.component(
         'w1',
         // The `import` function returns a Promise.
