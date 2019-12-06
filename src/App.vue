@@ -1,7 +1,8 @@
 <template>
   <div class="App">
-        <header class="header">Prototype Yadoms - VUEJS</header>
-        <button v-on:click="greet">charger widgets asynchrones</button>
+        <header class="header">Prototype Yadoms - VUEJS plop</header>
+        <button v-on:click="loadWidgets">charger widgets asynchrones</button>
+        <button v-on:click="changeFoo">upateFoo</button>
 
         <component v-bind:is="componentName1"></component>
         <br/>
@@ -9,7 +10,7 @@
         <component v-bind:is="componentName2"></component>
         <br/>
         <br/>
-        <component v-bind:is="componentName3"></component>
+        <component v-bind:is="componentName1"></component>
   </div>
 
 </template>
@@ -18,25 +19,35 @@
 import externalComponent from './utils/widget-loader';
 import Vue from 'vue'
 
+const apiInstance = {
+  v : Vue.observable({bar: 42}),
+  f : function() {
+      this.v.bar*=2;
+  },
+  p : function(t) {
+      this.v.bar += t;
+  },
+  
+};
+
 export default {
   name: 'app',
   components: {
   },
 	data:()=>({
-    componentName:'',
     componentName1:'',
     componentName2:'',
     componentName3:'',
-    awesome:null
-	}),  
+  }),
+  provide: {
+    api: apiInstance,
+  },
 // Définissez les méthodes de l'objet
   methods: {
-    greet: function () {
-      this.awesome = true;
-
-      var api : {
-        value: 42;
-      };
+    changeFoo: function() {
+      apiInstance.f();
+    },
+    loadWidgets: function () {
 
       Vue.component(
         'w1',
