@@ -10,7 +10,7 @@
         <component v-bind:is="componentName2"></component>
         <br/>
         <br/>
-        <component v-bind:is="componentName1"></component>
+        <component v-bind:is="componentName3"></component>
   </div>
 
 </template>
