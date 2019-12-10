@@ -7,10 +7,12 @@ L'objectif de ce proto de de valider que toutes les fonctionnalités nécessaire
 ### Widgets
 - [X] générer des widgets de façon autonome
 - [X] chargement de widget asynchrones
-- [ ] mutualiser un composant de base ()
+- [X] vérifier la dépendance à une lib externe (graphique...) => la lib est intégrée au widget minifé !
+- [ ] mutualiser un composant de base (highcharts...) => la lib n'est pas intégrée au widget minifié
 - [ ] typescript
-- [ ] fournir une interface widgetApi aux widgets
+- [X] fournir une interface widgetApi aux widgets
 - [ ] vérifier le dual communication (core -> widget : mise à jour d'une valeur, widget -> core : action à effectuer)
+- [/] proposer une archi de base  pour un widget (gestion des dépendances, de la génération,...)
 
 ### IHM
 - [ ] voir les couches material design (existent mais à creuser)

@@ -41,6 +41,7 @@ export default {
   }),
   provide: {
     api: apiInstance,
+    vue: Vue
   },
 // Définissez les méthodes de l'objet
   methods: {

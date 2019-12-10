@@ -63,13 +63,12 @@
 <script>
 
 
-import Vue from 'vue'
 import HighchartsVue from 'highcharts-vue'
 //import Highcharts from 'highcharts'
 
-Vue.use(HighchartsVue);
 
 export default {
+  inject: ['vue'],
   data () {
     return {
       title: '',
@@ -94,6 +93,9 @@ export default {
     }
   },
   created () {
+    
+    this.vue.use(HighchartsVue);
+
     let i = document.createElement('input')
     i.setAttribute('type', 'color');
     (i.type === 'color') ? this.colorInputIsSupported = true : this.colorInputIsSupported = false
