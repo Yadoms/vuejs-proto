@@ -11,7 +11,7 @@
     "allwidgets": "npm run widget1 && npm run widget2 && npm run widget3"
   },
   "dependencies": {
-    "highcharts": "^7.2.1",
+    "highcharts": "^7.2.2",
     "highcharts-vue": "^1.3.5",
     "vue": "^2.6.10"
   },
